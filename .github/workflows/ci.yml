@@ -10,6 +10,8 @@ jobs:
   lint-and-test-backend:
     name: Backend — Install & Build
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     defaults:
       run:
         working-directory: backend
@@ -33,6 +35,8 @@ jobs:
   lint-and-test-frontend:
     name: Frontend — Install & Build
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     defaults:
       run:
         working-directory: frontend
