@@ -13,6 +13,9 @@ metadata:
     # alb.ingress.kubernetes.io/target-type: ip
 spec:
   rules:
+    # Replace "infinite-ai.example.com" with your actual domain.
+    # For local testing, add an entry to /etc/hosts:
+    #   127.0.0.1  infinite-ai.example.com
     - host: infinite-ai.example.com
       http:
         paths:

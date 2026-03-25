@@ -13,6 +13,8 @@ services:
   postgres:
     image: postgres:15-alpine
     environment:
+      # ⚠ Hardcoded credentials are fine for local development only.
+      # For production, use a .env file or secrets manager and never commit real passwords.
       POSTGRES_DB: infiniteai
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: secret

@@ -9,4 +9,10 @@ spec:
   resources:
     requests:
       storage: 5Gi
+  # storageClassName "gp2" is AWS EBS-specific (EKS).
+  # Replace with the appropriate class for your platform:
+  #   minikube / kind  →  standard
+  #   GKE              →  standard-rwo
+  #   AKS              →  managed-premium
+  #   AWS EKS (gp3)    →  gp3
   storageClassName: gp2
